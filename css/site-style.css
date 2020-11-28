@@ -279,9 +279,15 @@
 
   #previous-button {
     left: 10px;
+    height: 300px;
   }
 
-  #next-button, #close-button {
+  #next-button {
+    right: 10px;
+    height: 300px;
+  }
+
+  #close-button {
     right: 10px;
   }
 }

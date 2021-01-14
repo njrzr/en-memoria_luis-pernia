@@ -1,4 +1,10 @@
-let photoIndex, previous, next;
+let loader = document.getElementById("loader");
+
+window.addEventListener("load", () => {
+  loader.classList.toggle("hide");
+})
+
+let photoIndex;
 const sliderArr = [];
 
 let mainContainer = document.getElementById("main-container")

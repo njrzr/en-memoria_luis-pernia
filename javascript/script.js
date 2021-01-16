@@ -1,11 +1,3 @@
-let loader = document.getElementById("loader");
-let hidden = document.querySelector(".hidden");
-
-window.addEventListener("load", () => {
-  loader.classList.toggle("hide-load");
-  hidden.classList.toggle("hidden");
-})
-
 let photoIndex;
 const sliderArr = [];
 
@@ -15,6 +7,14 @@ let photos = document.getElementById("photo-show");
 let closeButton = document.getElementById("close-button");
 let previousButton = document.getElementById("previous-button");
 let nextButton = document.getElementById("next-button");
+let loader = document.getElementById("loader");
+
+mainContainer.style.display = "none";
+
+window.addEventListener("load", () => {
+  loader.classList.toggle("hide-load");
+  mainContainer.style.display = "grid";
+})
 
 let photoGallery = document.getElementsByClassName("photo-gallery");
 let imgSrc = document.getElementsByClassName("photo");

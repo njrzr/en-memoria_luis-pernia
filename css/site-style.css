@@ -60,10 +60,6 @@
   z-index: 1;
 }
 
-.hidden {
-  display: none;
-}
-
 #photo {
   position: relative;
   grid-column: 1/3;

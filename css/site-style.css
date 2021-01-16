@@ -44,7 +44,7 @@
   100% {transform: rotate(360deg);}
 }
 
-.hide {
+.hide-load {
   display: none;
 }
 /*#endregion*/
@@ -58,6 +58,10 @@
   gap: 5px;
   width: 100%;
   z-index: 1;
+}
+
+.hidden {
+  display: none;
 }
 
 #photo {

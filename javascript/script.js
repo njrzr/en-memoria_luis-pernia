@@ -12,7 +12,7 @@ let loader = document.getElementById("loader");
 mainContainer.style.display = "none";
 
 window.addEventListener("load", () => {
-  loader.classList.toggle("hide-load");
+  loader.style.display = "none";
   mainContainer.style.display = "grid";
 })
 

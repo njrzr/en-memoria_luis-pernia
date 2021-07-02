@@ -4,6 +4,7 @@
   padding: 0;
   user-select: none;
   box-sizing: border-box;
+  font-size: 32px;
 }
 
 *::before, *::after {
@@ -18,34 +19,23 @@
   position: fixed;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #c0c0c0;
   z-index: 10;
 }
 
 #load-animation {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  border-top: 4px solid #ffffff;
-  border-right: 4px solid #ffffff00;
-  border-bottom: 4px solid #ffffff00;
-  border-left: 4px solid #ffffff00;
-  border-radius: 50px;
-  animation: spin 500ms infinite;
+  width: 200px;
+  height: 200px;
+  animation: spin infinite steps(8, start) .5s;
 }
 
 @keyframes spin {
   0% {transform: rotate(-0deg);}
   100% {transform: rotate(360deg);}
-}
-
-.hide-load {
-  display: none;
 }
 /*#endregion*/
 
@@ -77,23 +67,25 @@
 
 #info {
   position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   background: #c0c0c0 url("../images/marble-texture.jpg") center no-repeat;
   background-size: cover;
   grid-column: 3/7;
-  width: 100%;
-  height: 100%;
   word-wrap: break-word;
 }
 
-#info > p {
+#name, #birth, #death {
   position: relative;
   color: #ffffff;
-  padding: 30% 15px 0 15px;
+  padding: 0 15px;
   text-align: center;
-  font-family: Comfortaa;
-  font-size: 60px;
+  font-family: 'Montserrat';
+  font-size: 1.85rem;
   font-weight: bold;
-  text-shadow: 2px 2px#000000;
+  text-shadow: 2px 2px #000000;
 }
 
 .photo-gallery {
@@ -256,8 +248,8 @@
     grid-column: 2/4;
   }
 
-  #info > p {
-    font-size: 32px;
+  #name, #birth, #death {
+    font-size: 1rem;
   }
 
   .gallery-01 {
@@ -302,11 +294,11 @@
 
   #info {
     grid-column: 1/2;
+    padding: 10px 0;
   }
 
-  #info > p {
-    padding: 20px 10px;
-    font-size: 32px;
+  #name, #birth, #death {
+    font-size: .85rem;
   }
 
   .gallery-01, .gallery-02, .gallery-03, .gallery-04, .gallery-05, .gallery-06, .gallery-07, .gallery-08, .gallery-09, .gallery-10, .gallery-11, .gallery-12 {

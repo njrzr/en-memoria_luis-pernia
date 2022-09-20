@@ -1,3 +1,4 @@
 .editorconfig
+*.code-workspace
 /images/high_res
 /images/cross.svg

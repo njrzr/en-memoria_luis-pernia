@@ -364,7 +364,7 @@
     #birth i,
     #death i {
         font-size: 0.75rem;
-        margin: 0.5em 0;
+        margin: 0.5rem 0;
     }
 
     #photo-show {
@@ -396,12 +396,14 @@
         left: 5px;
         width: 12vw;
         height: 75vh;
+        background: none;
     }
 
     #next-button {
         right: 5px;
         width: 12vw;
         height: 75vh;
+        background: none;
     }
 
     #close-button {

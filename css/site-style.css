@@ -1,322 +1,417 @@
 /* EN: Website basic format */
 * {
-  margin: 0;
-  padding: 0;
-  user-select: none;
-  box-sizing: border-box;
-  font-size: 32px;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-size: 32px;
 }
 
-*::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* EN: Loader */
 /*#region*/
 #loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #c0c0c0;
-  z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #c0c0c0;
+    z-index: 10;
 }
 
 #load-animation {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  animation: spin infinite steps(8, start) .5s;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    animation: spin infinite steps(8, start) 1s;
 }
 
 @keyframes spin {
-  0% {transform: rotate(-0deg);}
-  100% {transform: rotate(360deg);}
+    0% {
+        transform: rotate(-0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 /*#endregion*/
 
 /* EN: Website style */
 /*#region*/
-#main-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 5px;
-  width: 100%;
-  z-index: 1;
+.main-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: 100vw;
+    z-index: 1;
+    background: url("../images/marble-texture.jpg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0.2rem;
+    gap: 0.2rem;
+}
+
+#main-photo-container {
+    position: relative;
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
 }
 
 #photo {
-  position: relative;
-  grid-column: 1/3;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    position: relative;
+    grid-column: 1/3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #photo-inner {
-  position: relative;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
 }
 
 #info {
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background: #c0c0c0 url("../images/marble-texture.jpg") center no-repeat;
-  background-size: cover;
-  grid-column: 3/7;
-  word-wrap: break-word;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    grid-column: 3/7;
+    word-wrap: break-word;
 }
 
-#name, #birth, #death {
-  position: relative;
-  color: #ffffff;
-  padding: 0 15px;
-  text-align: center;
-  font-family: 'Montserrat';
-  font-size: 1.85rem;
-  font-weight: bold;
-  text-shadow: 2px 2px #000000;
+#name,
+#birth,
+#death {
+    position: relative;
+    color: #ffffff;
+    padding: 0 15px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #000000;
+}
+
+#birth,
+#death {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#birth i,
+#death i {
+    font-size: 1rem;
+}
+
+#photo-gallery-container {
+    position: relative;
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    gap: 0.2rem;
 }
 
 .photo-gallery {
-  background: #c0c0c0 url("../images/marble-texture.jpg") center no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 240px;
-  cursor: pointer;
-  overflow: hidden;
+    width: 100%;
+    height: 240px;
+    cursor: pointer;
 }
 
 .photo {
-  width: 100%;
-  object-fit: contain;
-  height: 240px;
+    width: 100%;
+    object-fit: cover;
+    height: 240px;
+    border-radius: 0.25rem;
 }
 
 .gallery-01 {
-  grid-column: 1/3;
+    grid-column: 1/3;
 }
 
 .gallery-03 {
-  grid-column: 4/6;
+    grid-column: 4/6;
 }
 
 .gallery-05 {
-  grid-column: 1/3;
+    grid-column: 1/3;
 }
 
 .gallery-08 {
-  grid-column: 5/7;
+    grid-column: 5/7;
 }
 
 .gallery-10 {
-  grid-column: 2/4;
+    grid-column: 2/4;
 }
 
 .gallery-12 {
-  grid-column: 5/7;
+    grid-column: 5/7;
 }
 
 #photo-container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: #00000088;
-  z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    z-index: 2;
 }
 
 #photo-reel {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 75%;
-  height: 600px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    height: 100hv;
+    padding: 0.2rem;
 }
 
 #photo-show {
-  position: relative;
-  object-fit: contain;
-  width: 100%;
-  height: 600px;
+    position: relative;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-times,
+.fa-chevron-left,
+.fa-chevron-right {
+    font-size: 2rem;
 }
 
 #close-button {
-  position: absolute;
-  background: #ffffff88;
-  margin: auto;
-  top: 10px;
-  right: 30px;
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
+    position: absolute;
+    background: #ffffff88;
+    margin: auto;
+    top: 10px;
+    right: 20px;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #close-button:hover {
-  background: #ffffff;
-}
-
-#close-style {
-  position: absolute;
-  width: 60%;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    background: #ffffff;
 }
 
 #previous-button {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 30px;
-  bottom: 0;
-  border-radius: 10px 0 0 10px;
-  width: 50px;
-  height: 500px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-radius: 10px 0 0 10px;
+    width: 60px;
+    height: 75vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 0.2rem #ffffff;
 }
 
 #previous-button:hover {
-  background: #ffffff88;
-}
-
-#left-arrow {
-  position: absolute;
-  width: 60%;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    background: #ffffff88;
 }
 
 #next-button {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 30px;
-  bottom: 0;
-  border-radius: 0 10px 10px 0;
-  width: 50px;
-  height: 500px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    border-radius: 0 10px 10px 0;
+    width: 60px;
+    height: 75vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 0.2rem #ffffff;
 }
 
 #next-button:hover {
-  background: #ffffff88;
-}
-
-#right-arrow {
-  position: absolute;
-  width: 60%;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    background: #ffffff88;
 }
 
 .hide {
-  visibility: hidden;
+    visibility: hidden;
 }
 /*#endregion*/
 
 /* EN: Media query format */
 /*#region*/
+/* Tablet */
 @media screen and (max-width: 1200px) {
-  #main-container {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+    #main-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
-  #photo {
-    grid-column: 1/2;
-  }
+    #main-photo-container,
+    #photo-gallery-container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
-  #info {
-    grid-column: 2/4;
-  }
+    #photo {
+        grid-column: 1/2;
+    }
 
-  #name, #birth, #death {
-    font-size: 1rem;
-  }
+    #info {
+        grid-column: 2/4;
+    }
 
-  .gallery-01 {
-    grid-column: 1/3;
-  }
+    #name,
+    #birth,
+    #death {
+        font-size: 1rem;
+    }
 
-  .gallery-03 {
-    grid-column: 1/3;
-  }
+    #birth i,
+    #death i {
+        font-size: 0.75rem;
+    }
 
-  .gallery-05 {
-    grid-column: 1/3;
-  }
+    .gallery-01 {
+        grid-column: 1/3;
+    }
 
-  .gallery-08 {
-    grid-column: 2/4;
-  }
+    .gallery-03 {
+        grid-column: 1/3;
+    }
 
-  .gallery-10 {
-    grid-column: 2/4;
-  }
+    .gallery-05 {
+        grid-column: 1/3;
+    }
 
-  .gallery-12 {
-    grid-column: 2/4;
-  }
+    .gallery-08 {
+        grid-column: 2/4;
+    }
+
+    .gallery-10 {
+        grid-column: 2/4;
+    }
+
+    .gallery-12 {
+        grid-column: 2/4;
+    }
 }
 
+/* Mobile */
 @media screen and (max-width: 550px) {
-  #main-container {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    row-gap: 5px;
-    column-gap: 0;
-  }
+    #main-container,
+    #main-photo-container,
+    #photo-gallery-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 5px;
+        column-gap: 0;
+    }
 
-  #photo {
-    height: 100%;
-  }
+    #photo {
+        height: 100%;
+    }
 
-  #photo-inner {
-    height: 100%;
-  }
+    #photo-inner {
+        height: 100%;
+    }
 
-  #info {
-    grid-column: 1/2;
-    padding: 10px 0;
-  }
+    .photo-gallery,
+    .photo {
+        height: 100%;
+    }
 
-  #name, #birth, #death {
-    font-size: .85rem;
-  }
+    #info {
+        grid-column: 1/2;
+        padding: 10px 0;
+    }
 
-  .gallery-01, .gallery-02, .gallery-03, .gallery-04, .gallery-05, .gallery-06, .gallery-07, .gallery-08, .gallery-09, .gallery-10, .gallery-11, .gallery-12 {
-    grid-column: 1/2;
-  }
+    #name,
+    #birth,
+    #death {
+        font-size: 0.85rem;
+    }
 
-  #previous-button {
-    left: 10px;
-    height: 300px;
-  }
+    #birth i,
+    #death i {
+        font-size: 0.75rem;
+        margin: 0.5em 0;
+    }
 
-  #next-button {
-    right: 10px;
-    height: 300px;
-  }
+    #photo-show {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 
-  #close-button {
-    right: 10px;
-  }
+    #photo-reel {
+        width: 100%;
+    }
+
+    .gallery-01,
+    .gallery-02,
+    .gallery-03,
+    .gallery-04,
+    .gallery-05,
+    .gallery-06,
+    .gallery-07,
+    .gallery-08,
+    .gallery-09,
+    .gallery-10,
+    .gallery-11,
+    .gallery-12 {
+        grid-column: 1/2;
+    }
+
+    #previous-button {
+        left: 5px;
+        width: 12vw;
+        height: 75vh;
+    }
+
+    #next-button {
+        right: 5px;
+        width: 12vw;
+        height: 75vh;
+    }
+
+    #close-button {
+        width: 40px;
+        height: 40px;
+        right: 5px;
+    }
+
+    #close-button i {
+        font-size: 1rem;
+    }
 }
 /*#endregion*/

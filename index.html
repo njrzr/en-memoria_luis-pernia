@@ -1,102 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Memoria: Luis Orlando Pernia Rujano</title>
-    <link rel="stylesheet" type="text/css" href="css/site-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg" href="images/favicon.svg">
-    <script src="https://kit.fontawesome.com/4cd87bf5ed.js" crossorigin="anonymous"></script>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>En Memoria: Luis Orlando Pernia Rujano</title>
+        <link rel="stylesheet" type="text/css" href="css/site-style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/svg" href="images/favicon.svg" />
+        <script
+            src="https://kit.fontawesome.com/4cd87bf5ed.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-  <body>
-    <div id="loader">
-      <img alt="Gallery" id="load-animation" src="images/loader.svg" />
-    </div>
+    <body>
+        <div id="loader">
+            <img alt="Gallery" id="load-animation" src="images/loader.svg" />
+        </div>
 
-    <div id="photo-container" class="hide">
-      <div id="photo-reel">
-        <img id="photo-show" src="" alt="family pictures"/>
-      </div>
+        <div id="photo-container" class="hide">
+            <div id="photo-reel">
+                <img id="photo-show" src="" alt="Family Pictures" />
+            </div>
 
-      <div id="close-button">
-        <img src="images/close-button.svg" alt="close" id="close-style">
-      </div>
+            <div id="close-button">
+                <i class="fas fa-times"></i>
+            </div>
 
-      <div id="previous-button">
-        <img src="images/left-arrow.svg" alt="left" id="left-arrow">
-      </div>
+            <div id="previous-button">
+                <i class="fas fa-chevron-left"></i>
+            </div>
 
-      <div id="next-button">
-        <img src="images/right-arrow.svg" alt="right" id="right-arrow">
-      </div>
-    </div>
+            <div id="next-button">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
 
-    <div id="main-container">
-      <div id="photo">
-        <img id="photo-inner" src="images/cover.jpg" alt="cover">
-      </div>
+        <div class="main-container">
+            <div id="main-photo-container">
+                <div id="photo">
+                    <img
+                        id="photo-inner"
+                        src="images/cover.jpg"
+                        alt="Orlando Pernia"
+                    />
+                </div>
 
-      <div id="info">
-        <p id="name">Luis Orlando Pernia Rujano</p>
-        <p id="birth"><i class="fas fa-star"></i> 09-11-1962</p>
-        <p id="death"><i class="fas fa-cross"></i> 08-09-2020</p>
-      </div>
+                <div id="info">
+                    <p id="name">Luis Orlando Pernia Rujano</p>
+                    <p id="birth"><i class="fas fa-star"></i> 09-11-1962</p>
+                    <p id="death"><i class="fas fa-cross"></i> 08-09-2020</p>
+                </div>
+            </div>
 
-      <div class="photo-gallery gallery-01">
-        <img class="photo photo-01" src="images/pic_01.jpg" alt="photo">
-      </div>
+            <div id="photo-gallery-container">
+                <div class="photo-gallery gallery-01">
+                    <img
+                        class="photo photo-01"
+                        src="images/pic_01.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-02">
-        <img class="photo photo-02" src="images/pic_02.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-02">
+                    <img
+                        class="photo photo-02"
+                        src="images/pic_02.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-03">
-        <img class="photo photo-03" src="images/pic_03.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-03">
+                    <img
+                        class="photo photo-03"
+                        src="images/pic_03.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-04">
-        <img class="photo photo-04" src="images/pic_04.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-04">
+                    <img
+                        class="photo photo-04"
+                        src="images/pic_04.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-05">
-        <img class="photo photo-05" src="images/pic_05.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-05">
+                    <img
+                        class="photo photo-05"
+                        src="images/pic_05.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-06">
-        <img class="photo photo-06" src="images/pic_06.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-06">
+                    <img
+                        class="photo photo-06"
+                        src="images/pic_06.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-07">
-        <img class="photo photo-07" src="images/pic_07.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-07">
+                    <img
+                        class="photo photo-07"
+                        src="images/pic_07.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-08">
-        <img class="photo photo-08" src="images/pic_08.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-08">
+                    <img
+                        class="photo photo-08"
+                        src="images/pic_08.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-09">
-        <img class="photo photo-09" src="images/pic_09.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-09">
+                    <img
+                        class="photo photo-09"
+                        src="images/pic_09.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-10">
-        <img class="photo photo-10" src="images/pic_10.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-10">
+                    <img
+                        class="photo photo-10"
+                        src="images/pic_10.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-11">
-        <img class="photo photo-11" src="images/pic_11.jpg" alt="photo">
-      </div>
+                <div class="photo-gallery gallery-11">
+                    <img
+                        class="photo photo-11"
+                        src="images/pic_11.jpg"
+                        alt="photo"
+                    />
+                </div>
 
-      <div class="photo-gallery gallery-12">
-        <img class="photo photo-12" src="images/pic_12.jpg" alt="photo">
-      </div>
-    </div>
+                <div class="photo-gallery gallery-12">
+                    <img
+                        class="photo photo-12"
+                        src="images/pic_12.jpg"
+                        alt="photo"
+                    />
+                </div>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="javascript/script.js"></script>
-  </body>
+        <script type="text/javascript" src="javascript/script.js"></script>
+    </body>
 </html>
 
 <!--

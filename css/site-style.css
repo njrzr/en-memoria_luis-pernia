@@ -411,7 +411,7 @@
     }
 
     #next-button:hover,
-    #close-button:hover {
+    #previous-button:hover {
         background: none;
     }
 

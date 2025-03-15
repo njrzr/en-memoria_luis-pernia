@@ -396,20 +396,23 @@
         left: 5px;
         width: 12vw;
         height: 75vh;
-        background: none;
     }
 
     #next-button {
         right: 5px;
         width: 12vw;
         height: 75vh;
-        background: none;
     }
 
     #close-button {
         width: 40px;
         height: 40px;
         right: 5px;
+    }
+
+    #next-button:hover,
+    #close-button:hover {
+        background: none;
     }
 
     #close-button i {
